@@ -15,7 +15,7 @@ func TestDup(t *testing.T) {
 	//a, _ := GetAllVideo()
 	//t.Log(IfVideoExist(v.V_Id))
 
-	a, _ := GetVideoNum(3)
+	a, _ := GetVideoNum(1)
 	t.Log(a[0])
-	t.Log(a[1])
+	t.Log(UpdateVideo(a[0]))
 }

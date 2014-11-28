@@ -60,8 +60,9 @@ func GetVideoUrl(video *models.Video) (err error) {
 	if err != nil {
 		return err
 	}
+	
 	fs := regexp.MustCompile(
-		`(http://.+\.flv)\.ts\?ts_start=\d+&ts_end=\d+&ts_seg_no=\d+`,
+		`(http://.+\.(?:mp4|flv))\.ts\?ts_start=\d+&ts_end=\d+&ts_seg_no=\d+`,
 	).FindStringSubmatch(m3u8)
 	if len(fs) < 2 {
 		if m3u8 == `` {

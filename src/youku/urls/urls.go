@@ -14,7 +14,7 @@ func GetMetaPageURL(i int) (string, error) {
 	}
 }
 
-var m3u8 = "http://v.youku.com/player/getRealM3U8/vid/%s/type/flv/video.m3u8"
+var m3u8 = "http://v.youku.com/player/getM3U8/vid/%s/type/mp4/v.m3u8"
 
 func GetVideoM3U8URL(id string) string {
 
